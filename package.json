@@ -30,7 +30,7 @@
   },
   "description": "simple react app",
   "main": "index.js",
-  "repository": "git@github.com:nodeicode/Reactapp.git",
+  "repository": "https://github.com/nodeicode/Reactapp",
   "author": "nodeicode <lgopik2@uic.edu>",
   "license": "MIT"
 }

@@ -1,3 +1,7 @@
+##Simple React App 
+
+Gonna use this to play around and tweak in ReactJS.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
