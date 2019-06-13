@@ -1,10 +1,11 @@
 import React from 'react';
 import App from '../src/components/App/App.js';
+import '../static/index.css'
 //import dynamic from 'next/dynamic'
 //const {serviceWorker} = dynamic(()=> import('../src/serviceWorker'),{ssr:false})
 
 function root() {
-    return (<App></App>)};
+    return (<App/>)};
 
 
 // If you want your app to work offline and load faster, you can change

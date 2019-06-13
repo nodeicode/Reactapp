@@ -1,8 +1,8 @@
 import React from 'react';
-import Card from '../src/components/Card/Card';
+import Formp from '../src/components/Form/Form'
 
 
-function Form() {
-    return (<Card tag="now props!"/>)};
+function Fpage() {
+    return (<Formp/>)};
 
-export default Form;
+export default Fpage;
