@@ -4,20 +4,17 @@ import { makeStyles } from '@material-ui/styles';
 import './Form.css'
 import '../../../static/index.css'
 
-const tf = makeStyles({
+const a = makeStyles({
     textField:{
-    width:'20rem',
-    display:'inline-block',//css for TextField using Styled Compoenets API form material-ui
+    width:'30rem',//css for TextField using Styled Compoenets API form material-ui
     }
 });
-
-export default class F extends Component{
-    render(){
-        const c = tf;
+export default function F(){
+    const c = a();
             return(
             <div>
             <header>
-                <h1>Form to Sign Up to the Chat App</h1>
+                <h1>Form to Sign Up to the Chat App </h1>
             </header>
             <form autoComplete="on">
                 <TextField
@@ -37,4 +34,4 @@ export default class F extends Component{
             </form>
             </div>
         );
-}}
+}
