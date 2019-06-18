@@ -3,16 +3,26 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/styles';
 import './Form.css'
+import Grid from '@material-ui/core/Grid';
 import '../../../static/index.css'
 
+const useStyles = makeStyles(theme => ({
+    textField: {
+    },
+
+  }));
+
 export default function F(){
-   // const c = a();
-            return(
-            <div>
+    const c = useStyles();
+        return(
+        <div>
+        
             <header>
                 <h1>Form to Sign Up to the Chat App </h1>
             </header>
+            <Grid container spacing={3} justify="center">
             <form autoComplete="on" action="Submit">
+                <Grid item xs={12}>
                 <TextField
                 id="outlined-Email"
                 label="Email"
@@ -20,6 +30,8 @@ export default function F(){
                 placeholder="Enter your email 🤗"
                 margin="normal"
                 variant="outlined"/>
+                </Grid>
+                <Grid item xs={12}>
                 <TextField
                 id="outlined-password"
                 label="Password"
@@ -27,8 +39,12 @@ export default function F(){
                 placeholder="Now your Password 😁"
                 margin="normal"
                 variant="outlined"/>
-                <Button variant="outlined" >Submit</Button>
-            </form>
+                </Grid>
+                <Grid item style={{paddingTop:12}} xs={12}>
+                <Button  fullWidth variant="outlined" >Submit</Button>
+                </Grid>
+            </form></Grid>
             </div>
+             
         );
 }

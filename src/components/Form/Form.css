@@ -3,4 +3,5 @@ body{
 }
 form{
     display: inline-block;
+    height: 240px;
 }

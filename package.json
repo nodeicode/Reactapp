@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.0.2",
-    "@material-ui/styles": "^4.1.1",
+    "@material-ui/core": "^4.1.1",
     "@zeit/next-css": "^1.0.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
@@ -36,5 +35,8 @@
   "main": "index.js",
   "repository": "https://github.com/nodeicode/Reactapp",
   "author": "nodeicode <lgopik2@uic.edu>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
