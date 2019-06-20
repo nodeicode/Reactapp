@@ -1,6 +1,8 @@
 var express = require('express')
 var next = require('next')
 
+
+
 var dev = process.env.NODE_ENV!=='production'
 const app = next({dev})
 var handle = app.getRequestHandler()

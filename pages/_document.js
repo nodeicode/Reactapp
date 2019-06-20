@@ -17,10 +17,14 @@ class MyDocument extends Document {
           />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <link rel="manifest" href="../static/manifest.json" />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <script src="/__/firebase/6.2.0/firebase-app.js"/>
+          <script src="/__/firebase/init.js"/>
+          <script src="../src/helpers/msg.js"/>
         </body>
       </html>
     );

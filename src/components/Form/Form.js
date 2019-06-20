@@ -1,50 +1,52 @@
 import {Component} from 'react';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
-import { makeStyles } from '@material-ui/styles';
 import './Form.css'
 import Grid from '@material-ui/core/Grid';
 import '../../../static/index.css'
+import {ValidatorForm, TextValidator} from 'react-material-ui-form-validator'
 
-const useStyles = makeStyles(theme => ({
-    textField: {
-    },
 
-  }));
+export default class F extends Component{
+    
+    state = {email:'',}
 
-export default function F(){
-    const c = useStyles();
+    handleChange=(event)=>{
+        const email = event.target.value;
+        this.setState({email});
+    }
+    handleSubmit=()=>{
+        //firebase google auth
+        console.log(this.state.email)
+    }
+
+        render(){
+            const {email} = this.state;
         return(
         <div>
-        
             <header>
                 <h1>Form to Sign Up to the Chat App </h1>
             </header>
-            <Grid container spacing={3} justify="center">
-            <form autoComplete="on" action="Submit">
+            <Grid container spacing={1} justify="center">
+            <ValidatorForm autoComplete="on" ref="form"
+            onSubmit={this.handleSubmit}
+            onError={errors=>console.error(errors)}>
                 <Grid item xs={12}>
-                <TextField
+                <TextValidator
                 id="outlined-Email"
                 label="Email"
-                //className={c.textField}
+                name="email"
+                onChange={this.handleChange}
                 placeholder="Enter your email 🤗"
-                margin="normal"
+                value={email}
+                validators={['required', 'isEmail']}
+                errorMessages={['This is required 😅', 'Email is not valid 😒']}
+                helperText="Sign in with Google!"
                 variant="outlined"/>
                 </Grid>
-                <Grid item xs={12}>
-                <TextField
-                id="outlined-password"
-                label="Password"
-                //className={c.textField}
-                placeholder="Now your Password 😁"
-                margin="normal"
-                variant="outlined"/>
+                <Grid item style={{paddingTop:'10px'}} xs={12}>
+                <Button  fullWidth variant="outlined" type="Submit">Submit</Button>
                 </Grid>
-                <Grid item style={{paddingTop:12}} xs={12}>
-                <Button  fullWidth variant="outlined" >Submit</Button>
-                </Grid>
-            </form></Grid>
-            </div>
-             
-        );
-}
+                </ValidatorForm>
+            </Grid>
+            </div>);
+}}
