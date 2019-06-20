@@ -21,6 +21,7 @@ class MyApp extends App {
       <Container>
         <Head>
           <title> React Chat App</title>
+          <link rel="shortcut icon" href="./favicon.ico"/> 
         </Head>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
