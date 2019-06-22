@@ -1,18 +1,16 @@
 var express = require('express')
 var next = require('next')
 
-
-
 var dev = process.env.NODE_ENV!=='production'
 const app = next({dev})
 var handle = app.getRequestHandler()
+
 
 app.prepare().then(()=>{
     const server = express()
 
     //routes
     server.get('/login',(req,res)=>{
-        
     })
     server.get('*',(req,res)=>{
         return handle(req,res)

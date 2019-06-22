@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 
+
 class MyApp extends App {
   componentDidMount() {
     // Remove the server-side injected CSS.
@@ -20,8 +21,7 @@ class MyApp extends App {
     return (
       <Container>
         <Head>
-          <title> React Chat App</title>
-          <link rel="shortcut icon" href="./favicon.ico"/> 
+          <title> Chat it!</title>
         </Head>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

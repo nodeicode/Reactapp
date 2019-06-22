@@ -4,6 +4,7 @@ import { ServerStyleSheets } from '@material-ui/styles';
 import flush from 'styled-jsx/server';
 import theme from '../src/theme';
 
+
 class MyDocument extends Document {
   render() {
     return (
@@ -17,14 +18,12 @@ class MyDocument extends Document {
           />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="manifest" href="../static/manifest.json" />
+          <link rel="icon" type="image/x-icon" href="../static/favicon.ico"/>
+          <css src="./index.css"/>
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script src="/__/firebase/6.2.0/firebase-app.js"/>
-          <script src="/__/firebase/init.js"/>
-          <script src="../src/helpers/msg.js"/>
         </body>
       </html>
     );
@@ -76,5 +75,4 @@ MyDocument.getInitialProps = async ctx => {
     ),
   };
 };
-
 export default MyDocument;
