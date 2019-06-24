@@ -9,7 +9,7 @@ import '../../../static/index.css'
 export default class F extends Component{
     
     handleLogin=()=>{
-        //google auth using passportJS
+        console.log()
     }
         render(){
         return(
@@ -19,7 +19,11 @@ export default class F extends Component{
             </header>
                 <Button variant="outlined" 
                 style={{top:'20px'}}
-                 onClick={this.handleLogin}
+                href="/auth/google"
                  >Login</Button>
+                 <Button variant="outlined" 
+                style={{top:'20px'}}
+                 onClick={this.handleLogin}
+                 >UserC</Button>
             </div>);
 }}

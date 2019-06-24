@@ -1,17 +1,29 @@
 var express = require('express')
 var next = require('next')
+var passport = require('passport')
 
 var dev = process.env.NODE_ENV!=='production'
 const app = next({dev})
 var handle = app.getRequestHandler()
 
+require('./src/helpers/passport')
+
 
 app.prepare().then(()=>{
     const server = express()
+    
+    server.use(passport.initialize())
+    server.use(passport.session())
 
     //routes
-    server.get('/login',(req,res)=>{
-    })
+    server.get('/auth/google',//auth
+    passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
+
+    server.get('/auth/google/callback', //login
+    passport.authenticate('google', { failureRedirect: '/login' }),
+    function(req, res) {
+    res.redirect('/');});
+
     server.get('*',(req,res)=>{
         return handle(req,res)
     })
