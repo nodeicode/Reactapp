@@ -7,9 +7,12 @@ import '../../../static/index.css'
 
 
 export default class F extends Component{
-    
+    constructor(props){
+        super(props);
+        //var u = JSON.parse(req);
+    }
     handleLogin=()=>{
-        console.log()
+        console.log(user)
     }
         render(){
         return(

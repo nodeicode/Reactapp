@@ -6,7 +6,9 @@ var dev = process.env.NODE_ENV!=='production'
 const app = next({dev})
 var handle = app.getRequestHandler()
 
+require('dotenv').config()
 require('./src/helpers/passport')
+
 
 
 app.prepare().then(()=>{
