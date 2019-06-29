@@ -12,7 +12,7 @@ export default class F extends Component{
         //var u = JSON.parse(req);
     }
     handleLogin=()=>{
-        console.log(user)
+    fetch('/users',{method:'GET'}).then(res=>res.json()).then(result=>{/*working*/})
     }
         render(){
         return(

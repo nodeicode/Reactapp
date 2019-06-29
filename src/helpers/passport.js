@@ -11,12 +11,11 @@ passport.use(new GoogleStrategy({
     clientSecret: process.env.SEC,
     callbackURL: "http://localhost:3000/auth/google/callback",
   },
-  function(accessToken, refreshToken, profile, done) {
+  async function(accessToken, refreshToken, profile, done) {
     return done(null, {
       profile: profile,
       accessToken: accessToken
-  });}
-));
+  });}));
 passport.serializeUser(function(user, done) {
   done(null, user);
 });

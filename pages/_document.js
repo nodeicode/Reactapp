@@ -18,7 +18,6 @@ class MyDocument extends Document {
           />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="icon" type="image/x-icon" href="../static/favicon.ico"/>
           <css src="./index.css"/>
         </Head>
         <body>
