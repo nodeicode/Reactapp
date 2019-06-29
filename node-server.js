@@ -40,7 +40,6 @@ app.prepare().then(()=>{
 
     server.listen(3000,(err)=>{
         if(err)throw(err)
-        console.log("Ready on 3000 😆")
     })
 }).catch((ex)=>{
     console.error(ex.stack)
